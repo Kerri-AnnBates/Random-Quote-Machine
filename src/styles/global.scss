@@ -1,5 +1,5 @@
 * {
-	box-sizing: border-box;
+	@include global-reset;
 }
 
 html {
@@ -20,11 +20,16 @@ body {
 html,
 body {
 	min-height: 100%;
-	@include flex-center-all;
+	height    : 100%;
 }
 
-#root {
-	width: 100%;
+#root,
+.App {
+	height: 100%;
+}
+
+.App {
+	@include flex-center-all;
 }
 
 h1 {
