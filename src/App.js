@@ -33,8 +33,17 @@ class App extends Component {
 	}
 
 	render() {
+
+		const dynamicColorStyles = {
+			backgroundColor: this.state.colors[this.state.randomNum],
+			transition: 'all 1s'
+		}
+
 		return (
-			<div className="App" style={{ backgroundColor: this.state.colors[this.state.randomNum] }}>
+			<div
+				className="App"
+				style={dynamicColorStyles}
+			>
 				<h1 className="main-title">Random Quote Machine</h1>
 				<QuoteBox
 					mainColor={this.state.colors[this.state.randomNum]}

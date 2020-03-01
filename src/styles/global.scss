@@ -30,6 +30,10 @@ body {
 
 .App {
 	@include flex-center-all(column);
+
+	.main-title {
+		color: #fff;
+	}
 }
 
 h1 {
