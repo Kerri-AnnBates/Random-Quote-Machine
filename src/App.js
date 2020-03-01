@@ -15,14 +15,28 @@ class App extends Component {
 				'#6A2CAB',
 				'#AA4672',
 				'#0F2738'
-			]
+			],
+			randomNum: 0
 		}
+		this.randomColor = this.randomColor.bind(this);
 	}
+
+	randomColor() {
+		const randomNum = Math.floor(Math.random() * this.state.colors.length);
+		this.setState({
+			randomNum
+		});
+	}
+
+	componentDidMount() {
+		this.randomColor()
+	}
+
 	render() {
 		return (
-			<div className="App" style={{ backgroundColor: this.state.colors[0] }}>
+			<div className="App" style={{ backgroundColor: this.state.colors[this.state.randomNum] }}>
 				<h1 className="main-title">Random Quote Machine</h1>
-				<QuoteBox mainColor={this.state.colors[0]} />
+				<QuoteBox mainColor={this.state.colors[this.state.randomNum]} />
 			</div>
 		)
 	}
