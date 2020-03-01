@@ -5,7 +5,6 @@ class QuoteBox extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			randomNum: 0,
 			randomQuote: {},
 			quotes: []
 		}
@@ -16,6 +15,7 @@ class QuoteBox extends Component {
 		this.setState({
 			randomQuote: this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)]
 		});
+		this.props.getRandomNumForColor();
 	}
 
 	componentDidMount() {
