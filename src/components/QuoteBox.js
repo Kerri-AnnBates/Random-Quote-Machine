@@ -38,7 +38,10 @@ class QuoteBox extends Component {
 				<div id="text"><p>{this.state.randomQuote.quote}</p></div>
 				<div id="author"><p>{this.state.randomQuote.author}</p></div>
 				<div className="button-wrapper">
-					<button id="new-quote" onClick={this.getNewQuote}>New Quote</button>
+					<button id="new-quote"
+						onClick={this.getNewQuote}
+						style={{ backgroundColor: this.props.mainColor }}
+					>New Quote</button>
 					<a id="tweet-quote" href="twitter.com/intent/tweet">Tweet</a>
 				</div>
 			</div>

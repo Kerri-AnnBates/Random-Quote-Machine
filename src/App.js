@@ -7,14 +7,22 @@ class App extends Component {
 		super();
 
 		this.state = {
-			colors: ['#EB5855']
+			colors: [
+				'#EB5855',
+				'#199E43',
+				'#6B2827',
+				'#31719E',
+				'#6A2CAB',
+				'#AA4672',
+				'#0F2738'
+			]
 		}
 	}
 	render() {
 		return (
 			<div className="App" style={{ backgroundColor: this.state.colors[0] }}>
 				<h1 className="main-title">Random Quote Machine</h1>
-				<QuoteBox />
+				<QuoteBox mainColor={this.state.colors[0]} />
 			</div>
 		)
 	}
