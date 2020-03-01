@@ -36,8 +36,8 @@ class QuoteBox extends Component {
 		return (
 			<div id="quote-box">
 				<h1>Quote Box</h1>
-				<div id="text">{this.state.randomQuote.quote}</div>
-				<div id="author">{this.state.randomQuote.author}</div>
+				<div id="text"><p>{this.state.randomQuote.quote}</p></div>
+				<div id="author"><p>{this.state.randomQuote.author}</p></div>
 				<button id="new-quote" onClick={this.getNewQuote}>New Quote</button>
 				<a id="tweet-quote" href="twitter.com/intent/tweet">Tweet</a>
 			</div>
