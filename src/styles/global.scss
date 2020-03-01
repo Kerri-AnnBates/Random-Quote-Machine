@@ -3,7 +3,7 @@
 }
 
 html {
-	font-size: 64.5%;
+	font-size: 62.5%;
 }
 
 body {
@@ -29,7 +29,7 @@ body {
 }
 
 .App {
-	@include flex-center-all;
+	@include flex-center-all(column);
 }
 
 h1 {
@@ -38,8 +38,4 @@ h1 {
 
 h2 {
 	font-size: $subHeaderFont;
-}
-
-p {
-	font-size: $paragraphFont;
 }

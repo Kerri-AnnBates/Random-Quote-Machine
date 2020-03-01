@@ -1,7 +1,8 @@
-@mixin flex-center-all {
+@mixin flex-center-all($direction: row) {
 	display        : flex;
 	justify-content: center;
 	align-items    : center;
+	flex-direction : $direction;
 }
 
 @mixin global-reset {

@@ -1,6 +1,28 @@
 #quote-box {
-	max-width: 800px;
-	margin   : auto;
-	padding  : 0 2rem;
-	width    : 100%;
+	max-width       : 800px;
+	margin          : 1rem auto 0;
+	padding         : 4rem;
+	width           : 100%;
+	background-color: #FDFFE6;
+	border-radius   : 1rem;
+	box-shadow      : 7px 7px 20px -1px rgba(0, 0, 0, 0.17);
+
+	p {
+		font-size: $quoteFont;
+	}
+
+	.button-wrapper {
+		margin-top: 2rem;
+	}
+
+	button {
+		padding      : 1rem;
+		border-radius: 0.5rem;
+		margin-right : 2rem;
+		font-size    : $buttonFont;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
