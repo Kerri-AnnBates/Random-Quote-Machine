@@ -51,7 +51,7 @@ class QuoteBox extends Component {
 		return (
 			<div id="quote-box">
 				<div id="text" style={dynamicTextStyles}><p>{this.state.randomQuote.quote}</p></div>
-				<div id="author"><p>{this.state.randomQuote.author}</p></div>
+				<div id="author"><p>-{this.state.randomQuote.author}</p></div>
 				<div className="button-wrapper">
 					<button id="new-quote"
 						onClick={this.getNewQuote}
