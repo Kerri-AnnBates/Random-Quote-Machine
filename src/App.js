@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/app.scss';
 import QuoteBox from './components/QuoteBox';
 
 class App extends Component {
