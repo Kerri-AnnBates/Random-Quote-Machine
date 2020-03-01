@@ -12,6 +12,12 @@ class QuoteBox extends Component {
 		this.getNewQuote = this.getNewQuote.bind(this);
 	}
 
+	getNewQuote() {
+		this.setState({
+			randomQuote: this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)]
+		});
+	}
+
 	componentDidMount() {
 		axios.get("https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json")
 			.then(res => {
@@ -24,12 +30,6 @@ class QuoteBox extends Component {
 				})
 			})
 			.catch(err => console.log(err))
-	}
-
-	getNewQuote() {
-		this.setState({
-			randomQuote: this.state.quotes[Math.floor(Math.random() * this.state.quotes.length)]
-		});
 	}
 
 	render() {
