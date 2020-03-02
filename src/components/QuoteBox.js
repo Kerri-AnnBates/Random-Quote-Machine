@@ -45,8 +45,8 @@ class QuoteBox extends Component {
 		}
 
 		return (
-			<div id="quote-box">
-				<div id="text" style={styles.dynamicTextStyles}><p>{this.state.randomQuote.quote}</p></div>
+			<main id="quote-box">
+				<div id="text" style={styles.dynamicTextStyles}><p>&ldquo;{this.state.randomQuote.quote}&rdquo;</p></div>
 				<div id="author"><p>-{this.state.randomQuote.author}</p></div>
 				<div className="button-wrapper">
 					<button id="new-quote"
@@ -59,7 +59,7 @@ class QuoteBox extends Component {
 						href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" - ${this.state.randomQuote.author}`}
 					>Tweet</a>
 				</div>
-			</div>
+			</main>
 		)
 	}
 }
