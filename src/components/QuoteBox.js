@@ -53,7 +53,12 @@ class QuoteBox extends Component {
 						onClick={this.getNewQuote}
 						style={styles.dynamicColorStyles}
 					>New Quote</button>
-					<a id="tweet-quote" href="twitter.com/intent/tweet">Tweet</a>
+					{/* <a id="tweet-quote" href="twitter.com/intent/tweet">Tweet</a> */}
+					<a
+						target="_blank"
+						id="tweet-quote"
+						href={`https://twitter.com/intent/tweet?text="${this.state.randomQuote.quote}" - ${this.state.randomQuote.author}`}
+					>Tweet</a>
 				</div>
 			</div>
 		)
